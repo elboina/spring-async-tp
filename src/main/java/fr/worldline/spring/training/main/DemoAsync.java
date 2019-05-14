@@ -21,6 +21,7 @@ public class DemoAsync {
 			while (true) {
 				if (future.isDone()) {
 					System.out.println("Result from asynchronous process : ".concat(future.get()));
+					context.close();
 					break;
 				}
 				
